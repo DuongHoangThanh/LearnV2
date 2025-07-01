@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        Bundle.setLanguage(LanguageManager.shared.currentLanguage)
+        ThemeManager.shared.applyTheme(ThemeManager.shared.currentTheme)
+
         return true
     }
 

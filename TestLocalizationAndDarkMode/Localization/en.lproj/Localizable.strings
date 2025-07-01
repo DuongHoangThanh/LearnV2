@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TestLocalizationAndDarkMode
+
+  Created by Thạnh Dương Hoàng on 1/7/25.
+  
+*/
+
+"settings_title" = "Settings";
+"change_language" = "Change Language";
+"dark_mode" = "Dark Mode";
+
+
