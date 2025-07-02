@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  TestLocalizationAndDarkMode
+
+  Created by Thạnh Dương Hoàng on 1/7/25.
+  
+*/
+
+"settings_title" = "Settings";
+"change_language" = "Change Language";
+"dark_mode" = "Dark Mode";
+"Hello" = "hehe";
+"Bye" = "huhu";
+"home.title" = "Title";
+"account.Are you sure you want to delete your accountThis will permanently erase your account" = "Are you sure you want to delete your account? This will permanently erase your account";

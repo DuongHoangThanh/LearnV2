@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Second"
 
         updateLocalizedTexts()
         NotificationCenter.default.addObserver(self, selector: #selector(updateLocalizedTexts), name: .languageDidChange, object: nil)
@@ -28,3 +29,4 @@ class SecondViewController: UIViewController {
         titleLabel.textColor = UIColor(resource: .text)
     }
 }
+

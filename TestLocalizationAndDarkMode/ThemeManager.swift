@@ -15,13 +15,16 @@ enum AppTheme: String {
 class ThemeManager {
     static let shared = ThemeManager()
 
+    private let themeKey = "appTheme"
+    
     var currentTheme: AppTheme {
         get {
-            let value = UserDefaults.standard.string(forKey: "appTheme") ?? AppTheme.light.rawValue
+            let value = UserDefaults.standard.string(forKey: themeKey) ?? AppTheme.light.rawValue
             return AppTheme(rawValue: value) ?? .light
         }
         set {
-            UserDefaults.standard.set(newValue.rawValue, forKey: "appTheme")
+            guard currentTheme.rawValue != newValue.rawValue else { return }
+            UserDefaults.standard.set(newValue.rawValue, forKey: themeKey)
             applyTheme(newValue)
         }
     }

@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4F833C8E9266D992D9539390 /* Pods_TestLocalizationAndDarkMode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB3C847DBEFDDCCE007264E /* Pods_TestLocalizationAndDarkMode.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3BF713242E13CADA004B8CAA /* TestLocalizationAndDarkMode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLocalizationAndDarkMode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53ED8AC21A8EC478683003C0 /* Pods-TestLocalizationAndDarkMode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLocalizationAndDarkMode.release.xcconfig"; path = "Target Support Files/Pods-TestLocalizationAndDarkMode/Pods-TestLocalizationAndDarkMode.release.xcconfig"; sourceTree = "<group>"; };
+		5BB3C847DBEFDDCCE007264E /* Pods_TestLocalizationAndDarkMode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestLocalizationAndDarkMode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0EF716C941857EB19B86EBA /* Pods-TestLocalizationAndDarkMode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLocalizationAndDarkMode.debug.xcconfig"; path = "Target Support Files/Pods-TestLocalizationAndDarkMode/Pods-TestLocalizationAndDarkMode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F833C8E9266D992D9539390 /* Pods_TestLocalizationAndDarkMode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37181C35C1FC3222DD4A2CBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BB3C847DBEFDDCCE007264E /* Pods_TestLocalizationAndDarkMode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BF7131B2E13CADA004B8CAA = {
 			isa = PBXGroup;
 			children = (
 				3BF713262E13CADA004B8CAA /* TestLocalizationAndDarkMode */,
 				3BF713252E13CADA004B8CAA /* Products */,
+				BCD42DFD762BDBB93DE77B0B /* Pods */,
+				37181C35C1FC3222DD4A2CBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BCD42DFD762BDBB93DE77B0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0EF716C941857EB19B86EBA /* Pods-TestLocalizationAndDarkMode.debug.xcconfig */,
+				53ED8AC21A8EC478683003C0 /* Pods-TestLocalizationAndDarkMode.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BF713372E13CADB004B8CAA /* Build configuration list for PBXNativeTarget "TestLocalizationAndDarkMode" */;
 			buildPhases = (
+				3EA99BB00C572441FF82F095 /* [CP] Check Pods Manifest.lock */,
 				3BF713202E13CADA004B8CAA /* Sources */,
 				3BF713212E13CADA004B8CAA /* Frameworks */,
 				3BF713222E13CADA004B8CAA /* Resources */,
+				3B5CD2C92E14D32000615597 /* R.Swift */,
+				C9F11CCA8F799144751DC4E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				3BF713262E13CADA004B8CAA /* TestLocalizationAndDarkMode */,
 			);
 			name = TestLocalizationAndDarkMode;
-			packageProductDependencies = (
-			);
 			productName = TestLocalizationAndDarkMode;
 			productReference = 3BF713242E13CADA004B8CAA /* TestLocalizationAndDarkMode.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +157,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B5CD2C92E14D32000615597 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/TestLocalizationAndDarkMode/Resources/Generated/R.generated.swift\"\n\n";
+		};
+		3EA99BB00C572441FF82F095 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestLocalizationAndDarkMode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9F11CCA8F799144751DC4E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestLocalizationAndDarkMode/Pods-TestLocalizationAndDarkMode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestLocalizationAndDarkMode/Pods-TestLocalizationAndDarkMode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLocalizationAndDarkMode/Pods-TestLocalizationAndDarkMode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BF713202E13CADA004B8CAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,6 +235,7 @@
 /* Begin XCBuildConfiguration section */
 		3BF713382E13CADB004B8CAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0EF716C941857EB19B86EBA /* Pods-TestLocalizationAndDarkMode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -170,6 +264,7 @@
 		};
 		3BF713392E13CADB004B8CAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53ED8AC21A8EC478683003C0 /* Pods-TestLocalizationAndDarkMode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -235,7 +330,7 @@
 				DEVELOPMENT_TEAM = 99Y33U387N;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -300,7 +395,7 @@
 				DEVELOPMENT_TEAM = 99Y33U387N;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

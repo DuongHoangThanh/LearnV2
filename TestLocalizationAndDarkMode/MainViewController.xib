@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="TestLocalizationAndDarkMode" customModuleProvider="target">
             <connections>
-                <outlet property="completedLabel" destination="F1m-9q-Qsb" id="i79-ij-RN4"/>
+                <outlet property="completedLabel" destination="F1m-9q-Qsb" id="szC-uE-CAy"/>
                 <outlet property="darkModeSwitch" destination="PhM-La-zKX" id="fbc-LY-bxP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -60,11 +60,19 @@
                         <action selector="didTapFrench:" destination="-1" eventType="touchUpInside" id="F0q-YT-hjf"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wce-QO-ClF">
+                    <rect key="frame" x="153" y="230" width="87" height="41"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                    <color key="textColor" name="Text"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="Background"/>
             <constraints>
+                <constraint firstItem="wce-QO-ClF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="112" id="K95-ah-0Dm"/>
                 <constraint firstItem="F1m-9q-Qsb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LXN-Ml-eP0"/>
+                <constraint firstItem="wce-QO-ClF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O7x-U8-16p"/>
                 <constraint firstItem="F1m-9q-Qsb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sfA-Ib-cR2"/>
             </constraints>
             <point key="canvasLocation" x="118" y="-12"/>

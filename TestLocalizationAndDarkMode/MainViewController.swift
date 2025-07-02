@@ -6,24 +6,40 @@
 //
 
 import UIKit
+import Combine
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var darkModeSwitch: UISwitch!
+    private var cancellables = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         darkModeSwitch.isOn = ThemeManager.shared.currentTheme == .dark
         updateLocalizedTexts()
         applyThemeUI()
-        NotificationCenter.default.addObserver(self, selector: #selector(updateLocalizedTexts), name: .languageDidChange, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(applyThemeUI), name: .themeChanged, object: nil)
         
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(updateLocalizedTexts), name: .languageDidChange, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(applyThemeUI), name: .themeChanged, object: nil)
+        
+        NotificationCenter.default.publisher(for: .languageDidChange)
+            .sink { [weak self] _ in
+                self?.updateLocalizedTexts()
+            }
+            .store(in: &cancellables)
+        
+//        NotificationCenter.default.publisher(for: .themeChanged)
+//            .sink { [weak self] _ in
+//                self?.applyThemeUI()
+//            }
+//            .store(in: &cancellables)
     }
     
     @IBOutlet weak var completedLabel: UILabel!
     
     @objc func updateLocalizedTexts() {
-        completedLabel.text = "settings_title".localized
+        completedLabel.text = R.string.localizable.settings_title()
     }
     
     @objc private func applyThemeUI() {
@@ -46,6 +62,9 @@ class MainViewController: UIViewController {
     @IBAction func themeToggleSwitched(_ sender: UISwitch) {
         ThemeManager.shared.currentTheme = sender.isOn ? .dark : .light
     }
+    
+    
+
 }
 
 extension String {
